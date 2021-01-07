@@ -1,0 +1,404 @@
+
+<td colspan="9000">
+    <style>
+    .greencoin-injection-wrapper {
+        width: 270px;
+        margin-top: 12px;
+        display: inline-block;
+        border-width: 3px;
+        border-style: solid;
+        border-image: initial;
+        border-radius: 2px;
+        overflow: hidden;
+        border: 2px solid #4A8A4B;
+        border-radius: 22px;
+    }
+
+    .logo-text {
+        color: black;
+        font: "Roboto"
+    }
+
+    .summary-title {
+        padding: 10px 21px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #DCFFDF;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 18px;
+        padding: 12px 21px 12px;
+        vertical-align: middle;
+        background-color: #DCFFDF;
+        border-bottom: 2px solid #4A8A4B;
+        border-radius: 0px;
+  
+
+    }
+
+    .vertical-middle {
+	    display: inline-block;
+      vertical-align: middle;
+    }
+
+    .vertical-left {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #goal{
+        font-size: 12px;
+        padding-left: 180px;
+    }
+
+
+    div.card, button.card {
+      width: 100%;
+      background-color: #fff;
+      /* Overwrite bootstrap styles */
+      display: inherit;
+      border: inherit;
+      border-radius: inherit;
+      /* border-bottom: 1px solid #d8deed; */
+      border-bottom: none;
+      flex-direction: inherit;
+    }
+
+
+    div.last-card {
+      width: 100%;
+      background-color: #fff;
+      /* Overwrite bootstrap styles */
+      display: inherit;
+      border: inherit;
+      border-radius: inherit;
+      flex-direction: inherit;
+
+    }
+
+
+    #donations {
+        padding: 5px 9px 9px 15px;
+    }
+    .donations-icon img {
+        margin-left: 4px;
+        margin-right: 4px;
+        padding-bottom: 4px;
+    }
+    .donations-action {
+        position: relative;
+        height: 50px;
+    }
+    .donate-button {
+        width: 153px;
+        height: 25px;
+        background: #6EB257;
+        border: 0.5px solid #6EB257;
+        box-sizing: border-box;
+        border-radius: 6px;
+        color: white;
+        margin-left: 20px;
+        margin-bottom: 15px;
+        border-style:none;
+    }
+
+    .donate-button:hover {
+      transition: 0.5s ease-in-out;
+      background: #8bc279;
+      border-style:none;
+    }
+
+    .btn:hover svg {
+      stroke-dashoffset: -480;
+    }
+
+    .donate-button:active {
+      border: #8bc279;
+    }
+
+    .btn span {
+      color: white;
+      font-size: 18px;
+      font-weight: 100;
+    }
+
+    .impact-text {
+        vertical-align: middle;
+        font-size: 14px;
+    }
+
+
+    #progress-bar1{
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #6EB257;
+      border: 0.5px solid #000000;
+      border-radius: 14px;
+      -ms-progress-appearance: ring;
+    }
+
+    #progress-bar{
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 14px;
+    border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px;
+
+    }
+
+  #progress-bar::-webkit-progress-bar {
+      background-color: rgb(216, 216, 216);
+      border-radius: 14px;
+    }
+
+
+
+    
+*, *::after, *::before {
+box-sizing: border-box;
+}
+
+.modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0);
+transition: 200ms ease-in-out;
+border: 1px solid rgb(28, 175, 201);
+border-radius: 10px;
+z-index: 10;
+background-color: rgb(241, 241, 241);
+width: 500px;
+max-width: 80%;
+}
+
+.modal.active {
+transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+padding: 10px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+font-size: 1.25rem;
+font-weight: bold;
+}
+
+.modal-header .close-button {
+cursor: pointer;
+border: none;
+outline: none;
+background: none;
+font-size: 1.25rem;
+font-weight: bold;
+}
+
+.modal-body {
+padding: 10px 15px;
+}
+
+#overlay {
+position: fixed;
+opacity: 0;
+transition: 200ms ease-in-out;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, .5);
+pointer-events: none;
+}
+
+#overlay.active {
+opacity: 1;
+pointer-events: all;
+}
+
+
+
+
+  </style>
+  <div id="greencoin-injection-wrapper" class="greencoin-injection-wrapper">  
+    <div id="content-wrapper">
+      <div id="content"> 
+        <div class="title">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z" fill="#6EB257"/>
+              <path opacity="0.5" d="M57.2636 32.5611C57.2636 46.2035 45.9529 57.2629 32.0005 57.2629C18.048 57.2629 6.7373 46.2035 6.7373 32.5611C6.7373 18.9187 18.048 7.85938 32.0005 7.85938C45.9529 7.85938 57.2636 18.9187 57.2636 32.5611Z" fill="#4A8A4B"/>
+              <path d="M38.0501 38.6406C38.0501 37.4427 37.6269 36.4336 36.7806 35.6133C35.9472 34.793 34.5345 34.0508 32.5423 33.3867C29.7688 32.5404 27.7441 31.4401 26.4681 30.0859C25.205 28.7188 24.5735 26.987 24.5735 24.8906C24.5735 22.7552 25.192 21.0039 26.429 19.6367C27.679 18.2695 29.3912 17.4557 31.5657 17.1953V12.918H34.4759V17.2148C36.6634 17.5143 38.3626 18.4323 39.5735 19.9688C40.7975 21.5052 41.4095 23.6081 41.4095 26.2773H37.8157C37.8157 24.4414 37.3795 22.9831 36.5071 21.9023C35.6347 20.8216 34.4563 20.2812 32.972 20.2812C31.4225 20.2812 30.2376 20.6849 29.4173 21.4922C28.597 22.2865 28.1868 23.3997 28.1868 24.832C28.1868 26.1602 28.6165 27.2214 29.4759 28.0156C30.3483 28.7969 31.7741 29.513 33.7532 30.1641C35.7454 30.8021 37.2949 31.5117 38.4017 32.293C39.5214 33.0612 40.3418 33.9596 40.8626 34.9883C41.3964 36.0169 41.6634 37.2214 41.6634 38.6016C41.6634 40.8021 40.9993 42.5729 39.6712 43.9141C38.3561 45.2552 36.5071 46.0495 34.1243 46.2969V50.0273H31.2337V46.2969C28.8118 46.0755 26.9108 45.2161 25.5306 43.7188C24.1634 42.2083 23.4798 40.1641 23.4798 37.5859H27.0931C27.0931 39.3958 27.5683 40.7891 28.5188 41.7656C29.4694 42.7422 30.817 43.2305 32.5618 43.2305C34.2675 43.2305 35.6087 42.8203 36.5853 42C37.5618 41.1797 38.0501 40.0599 38.0501 38.6406Z" fill="#6EB257"/>
+              <path d="M21.3338 14.5957L26.1957 20.4904H16.4719L21.3338 14.5957Z" fill="#1A4721"/>
+              <path d="M21.333 17.9648L29.1121 25.5438H13.554L21.333 17.9648Z" fill="#1A4721"/>
+              <path d="M21.3338 22.457L30.0852 32.5623H12.5824L21.3338 22.457Z" fill="#1A4721"/>
+              <path d="M21.3335 28.0703L31.0573 39.0177H11.6097L21.3335 28.0703Z" fill="#1A4721"/>
+          </svg>
+          Greencoin  
+  </div>
+         
+  <div id="summary" class="card">
+    <div id="progress-container">
+        <svg style="padding-left: 10px; padding-top: 12px"width="38" height="28" viewBox="0 0 58 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <circle cx="44" cy="20" r="10" fill="#E1D24B"/>
+            </g>
+            <g filter="url(#filter1_d)">
+            <circle cx="32" cy="30" r="10" fill="#E1D24B"/>
+            </g>
+            <g filter="url(#filter2_d)">
+            <path d="M24 10C24 15.5228 19.5228 20 14 20C8.47715 20 4 15.5228 4 10C4 4.47715 8.47715 0 14 0C19.5228 0 24 4.47715 24 10Z" fill="#E1D24B"/>
+            </g>
+            <defs>
+            <filter id="filter0_d" x="30" y="10" width="28" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            <filter id="filter1_d" x="18" y="20" width="28" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            <filter id="filter2_d" x="0" y="0" width="28" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+        </svg>      
+        <progress style="margin-bottom: 5px; width:200px"id='progress-bar' value="32" max="100"></progress>
+        <div id='goal'>Goal: $100</div>
+        <div id="donations" class="card">
+          <div class="donations-icon">
+            <div class="vertical-middle-helper"></div>
+              <div class="impact-text">
+                <svg class="vertical-left"width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_f)">
+                  <path d="M8.38432 4L10.2496 6.42308H6.51903L8.38432 4Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M8.38311 6.1543L11.181 8.57737H5.58518L8.38311 6.1543Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M8.38311 7.23047L11.6139 11.5382H5.15234L8.38311 7.23047Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M8.38386 9.38477L12.1144 14.2309H4.65329L8.38386 9.38477Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <rect x="7.30664" y="13.6914" width="2.15385" height="2.15385" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M12.691 7.23047L14.5562 9.65355H10.8257L12.691 7.23047Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M12.6917 8.30859L15.4896 11.5394H9.89378L12.6917 8.30859Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M12.6917 9.38477L15.9225 13.6925H9.46094L12.6917 9.38477Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <path d="M12.6925 11.5391L16.423 15.5775H8.96189L12.6925 11.5391Z" fill="#6EB257" fill-opacity="0.4"/>
+                  <rect x="11.6152" y="14.7695" width="2.15385" height="2.15385" fill="#6EB257" fill-opacity="0.4"/>
+                  </g>
+                  <path d="M7 2L9.59808 5H4.40192L7 2Z" fill="#1A4721"/>
+                  <path d="M7 4L10.4641 8.5H3.5359L7 4Z" fill="#1A4721"/>
+                  <path d="M7 6L11 11H3L7 6Z" fill="#1A4721"/>
+                  <path d="M7 8L11.3301 13.25H2.66987L7 8Z" fill="#1A4721"/>
+                  <rect x="6" y="13" width="2" height="2" fill="#1A4721"/>
+                  <path d="M13 6L15.5981 9H10.4019L13 6Z" fill="#6EB257"/>
+                  <path d="M13 8L16.4641 11.75H9.5359L13 8Z" fill="#6EB257"/>
+                  <path d="M13 9L17 14H9L13 9Z" fill="#6EB257"/>
+                  <path d="M13 12L17.3301 15.75H8.66987L13 12Z" fill="#6EB257"/>
+                  <rect x="12" y="15" width="2" height="2" fill="#6EB257"/>
+                  <defs>
+                  <filter id="filter0_f" x="0.652344" y="0" width="19.7697" height="20.9234" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+                  </filter>
+                  </defs>
+                  </svg>        
+                  Planting approximately 10 trees
+                </div>
+            </div>
+          </div>
+
+
+        <div id="donations" class="card">
+          <div class="donations-icon">
+              <div class="vertical-middle-helper"></div>
+                <div class="impact-text" >
+                  <svg class='vertical-left'width="21" height="20" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.33398C9.12333 3.33398 10.8908 4.84482 11.2875 6.85732C12.8042 6.96232 14 8.21065 14 9.75065C14 11.3607 12.6933 12.6673 11.0833 12.6673H3.5C1.56917 12.6673 0 11.0981 0 9.16732C0 7.36482 1.365 5.87732 3.12083 5.69065C3.85 4.29065 5.31417 3.33398 7 3.33398ZM3.49983 11.5007H11.0832C12.0515 11.5007 12.8332 10.719 12.8332 9.75065C12.8332 8.78232 12.0515 8.00065 11.0832 8.00065H10.2082V7.70898C10.2082 5.93565 8.77316 4.50065 6.99983 4.50065C5.52983 4.50065 4.299 5.48648 3.914 6.83398H3.49983C2.21066 6.83398 1.1665 7.87815 1.1665 9.16732C1.1665 10.4565 2.21066 11.5007 3.49983 11.5007Z" fill="#6EB257" fill-opacity="0.54"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 1.16602C16.5617 1.16602 17.4454 1.92143 17.6437 2.92768C18.4021 2.98018 19 3.60435 19 4.37435C19 5.17935 18.3467 5.83268 17.5417 5.83268H13.75C12.7846 5.83268 12 5.0481 12 4.08268C12 3.18143 12.6825 2.43768 13.5604 2.34435C13.925 1.64435 14.6571 1.16602 15.5 1.16602ZM13.7502 5.24967H17.5418C18.026 5.24967 18.4168 4.85884 18.4168 4.37467C18.4168 3.89051 18.026 3.49967 17.5418 3.49967H17.1043V3.35384C17.1043 2.46717 16.3868 1.74967 15.5002 1.74967C14.7652 1.74967 14.1497 2.24259 13.9572 2.91634H13.7502C13.1056 2.91634 12.5835 3.43842 12.5835 4.08301C12.5835 4.72759 13.1056 5.24967 13.7502 5.24967Z" fill="#6EB257" fill-opacity="0.54"/>
+                    </svg>
+                    Offsetting 4800 lbs of CO2
+                </div>
+              </div>
+        </div>
+
+        <div id="donations" class="card">
+          <div class="donations-icon">
+            <div class="vertical-middle-helper"></div>
+              <div class="impact-text" id='impact-text'>
+                <svg style='padding-top: 3px'width="18" height="18" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                  <path d="M17.5 3.33203H3.5C2.52875 3.33203 1.75875 4.0737 1.75875 4.9987L1.75 14.9987C1.75 15.9237 2.52875 16.6654 3.5 16.6654H17.5C18.4713 16.6654 19.25 15.9237 19.25 14.9987V4.9987C19.25 4.0737 18.4713 3.33203 17.5 3.33203ZM17.5 14.9987H3.5V9.9987H17.5V14.9987ZM17.5 6.66536H3.5V4.9987H17.5V6.66536Z" fill="#6EB257"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0">
+                  <rect width="21" height="25" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                   You can donate $1.01 now
+              </div>
+            </div>
+        </div>
+
+        <div id="donations" class="last-card">
+          <div class="donations-icon">
+            <div class="vertical-middle-helper"></div>
+              <div class="impact-text" style="text-align: center;">
+                <svg width="61" height="30" viewBox="0 0 51 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect width="61" height="28" fill="url(#pattern0)"/>
+                  <defs>
+                  <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0" transform="translate(0 -0.103865) scale(0.00217865 0.00483092)"/>
+                  </pattern>
+                  <image id="image0" width="459" height="250" xlink:href="data:image/png;base64,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"/>
+                  </defs>
+                  </svg>
+                   <button class="donate-button"id="donate-button" data-modal-target="#modal"> Donate</button>
+                      <div class="modal" id="modal">
+                        <div class="modal-header" style="background-color: #DCFFDF;" >
+                          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z" fill="#6EB257"/>
+                            <path opacity="0.5" d="M57.2636 32.5611C57.2636 46.2035 45.9529 57.2629 32.0005 57.2629C18.048 57.2629 6.7373 46.2035 6.7373 32.5611C6.7373 18.9187 18.048 7.85938 32.0005 7.85938C45.9529 7.85938 57.2636 18.9187 57.2636 32.5611Z" fill="#4A8A4B"/>
+                            <path d="M38.0501 38.6406C38.0501 37.4427 37.6269 36.4336 36.7806 35.6133C35.9472 34.793 34.5345 34.0508 32.5423 33.3867C29.7688 32.5404 27.7441 31.4401 26.4681 30.0859C25.205 28.7188 24.5735 26.987 24.5735 24.8906C24.5735 22.7552 25.192 21.0039 26.429 19.6367C27.679 18.2695 29.3912 17.4557 31.5657 17.1953V12.918H34.4759V17.2148C36.6634 17.5143 38.3626 18.4323 39.5735 19.9688C40.7975 21.5052 41.4095 23.6081 41.4095 26.2773H37.8157C37.8157 24.4414 37.3795 22.9831 36.5071 21.9023C35.6347 20.8216 34.4563 20.2812 32.972 20.2812C31.4225 20.2812 30.2376 20.6849 29.4173 21.4922C28.597 22.2865 28.1868 23.3997 28.1868 24.832C28.1868 26.1602 28.6165 27.2214 29.4759 28.0156C30.3483 28.7969 31.7741 29.513 33.7532 30.1641C35.7454 30.8021 37.2949 31.5117 38.4017 32.293C39.5214 33.0612 40.3418 33.9596 40.8626 34.9883C41.3964 36.0169 41.6634 37.2214 41.6634 38.6016C41.6634 40.8021 40.9993 42.5729 39.6712 43.9141C38.3561 45.2552 36.5071 46.0495 34.1243 46.2969V50.0273H31.2337V46.2969C28.8118 46.0755 26.9108 45.2161 25.5306 43.7188C24.1634 42.2083 23.4798 40.1641 23.4798 37.5859H27.0931C27.0931 39.3958 27.5683 40.7891 28.5188 41.7656C29.4694 42.7422 30.817 43.2305 32.5618 43.2305C34.2675 43.2305 35.6087 42.8203 36.5853 42C37.5618 41.1797 38.0501 40.0599 38.0501 38.6406Z" fill="#6EB257"/>
+                            <path d="M21.3338 14.5957L26.1957 20.4904H16.4719L21.3338 14.5957Z" fill="#1A4721"/>
+                            <path d="M21.333 17.9648L29.1121 25.5438H13.554L21.333 17.9648Z" fill="#1A4721"/>
+                            <path d="M21.3338 22.457L30.0852 32.5623H12.5824L21.3338 22.457Z" fill="#1A4721"/>
+                            <path d="M21.3335 28.0703L31.0573 39.0177H11.6097L21.3335 28.0703Z" fill="#1A4721"/>
+                          </svg>
+                          <div class="title" style="">Greencoin</div>
+                          <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body" style="background-color:#8bc279; color: white">
+                            Thank you for the donation!
+                        </div>
+                      </div>
+                      <div id="overlay"></div>
+                </div>
+              </div>        
+              <script src='foreground.js'>
+              </script>
+              <script src="https://js.stripe.com/v3/"></script>
+            </div>
+        </div>
+    </div>
+  </div>
+</td>
+

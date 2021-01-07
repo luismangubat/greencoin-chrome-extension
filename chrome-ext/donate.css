@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'Roboto' !important;
+    src: url('../font/Roboto-Regular.ttf') !important;
+  }
+  .rb {font-family: 'Roboto';}
+  @font-face {
+    font-family: 'Roboto Black';
+    src: url('../font/Roboto-Black.ttf');
+  }
+  .rbB {font-family: 'Roboto Black';}
+  @font-face {
+    font-family: 'Roboto Light';
+    src: url('../font/Roboto-Light.ttf');
+  }
+  .rbL {font-family: 'Roboto Light';}
+
+
+  #greencoin-injection-wrapper {
+    box-shadow: rgb(24, 14, 119) 0px 5px 8px 0px !important;
+    width: 260px;
+    margin-top: 12px;
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(129, 1, 1) !important;
+    border-image: initial;
+    border-radius: 6px;
+	overflow: hidden;
+	color: blue;
+	background-color: blues;
+}
+
+#logo-text {
+	color: blue;
+	font: "Roboto"
+}
+
+.greencoin-injection-wrapper {
+    box-shadow: rgb(24, 14, 119) 0px 5px 8px 0px !important;
+    width: 260px;
+    margin-top: 12px;
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(129, 1, 1) !important;
+    border-image: initial;
+    border-radius: 6px;
+	overflow: hidden;
+	color: blue;
+	background-color: blues;
+}
+
+.logo-text {
+	color: blue;
+	font: "Roboto"
+}
+
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
